@@ -21,7 +21,7 @@ namespace UdonSharp.Examples.Utilities
         private bool localHoge = false;
         void Start()
         {
-            bHoge = WorldLigth.activeSelf;
+            //bHoge = WorldLigth.activeSelf;
         }
         
         /// <summary>
@@ -37,7 +37,7 @@ namespace UdonSharp.Examples.Utilities
                     // 同期変数が変化した場合のローカル処理。
                     Debug.Log("Call2");
                 }
-                WorldLigth.SetActive(bHoge);
+                //WorldLigth.SetActive(bHoge);
         }
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace UdonSharp.Examples.Utilities
             }
             Debug.Log("Call1");
             //同期変数を更新;
-            bHoge = true;
+            bHoge = !bHoge;
             RequestSerialization();
         }
     }
